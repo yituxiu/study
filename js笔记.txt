@@ -1,0 +1,83 @@
+前端开发要求：
+行为，样式，结构分离；
+//属性可以用点的方式，同样可以用方括号
+window.onload=function(){
+				var Dom=document['getElementsByTagName']("DIV");
+					Dom[0]['style']['background']="red"
+					log(typeof Dom)				
+			}
+var pi=3.14;
+parseInt(pi)  //3
+parseFloat(pi) //3.14
+break  //中断
+continue //继续
+
+true     非0的数字都为true    非空字符串   是      true   非空对象  是  true
+false     0是假       空字符串是   false
+object.currentStyel.width    ie获取计算后的样式
+getComputedStyle(Object).width   非ie获取计算后的样式
+splice(起始位置，几个元素，替换内容)
+push尾部添加   unShift头部添加
+pop 尾部删除   shift头部删除   
+///////////
+getFullYear()年
+getMonth()月
+getDate()日
+getDay()星期
+getHourse
+getMinutes
+D.getMinutes()
+D.getHours()
+D.getSeconds()
+
+/////////// 相同程序代码可以用=号
+var obox=document.getElementById("box");
+			var opox=document.getElementById("pox");
+			var times=null;
+			obox.onmouseover=opox.onmouseover=function (){
+				clearInterval(times)
+				opox.style.display="block";
+			}			
+			obox.onmouseout=opox.onmouseout=function (){				
+				times=setInterval(function (){opox.style.display="none";},500)
+			}
+//////////////////
+obox.onmouseover=opox.onmouseover=function (){
+				clearInterval(times)
+				opox.style.display="block";
+			}
+			
+			obox.onmouseout=function (){
+				
+				times=setInterval(function (){opox.style.display="none";},500)
+			}
+			
+			opox.onmouseover=function (){
+				clearInterval(times)
+				opox.style.display="block";
+			}
+			opox.onmouseout=function (){
+				
+				times=setTimeout(function (){opox.style.display="none"},500)
+			}
+///////////////////////////////////////////////////////////////////
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

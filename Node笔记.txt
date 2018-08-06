@@ -1,0 +1,64 @@
+npm 官网 ；
+https://www.npmjs.com/
+KOA node框架官网
+http://koajs.com/
+中文Koa  网站
+http://koa.bootcss.com/     
+const http=require('http')
+const http=require('http');
+const queryString=require('querystring');
+const URL=require('url')
+http.createServer(function (){
+console.log()
+})
+GET方式
+const url=require('url');
+
+
+
+
+const http=require('http');
+var server=createPool()
+var server=http.createServer(function (req,res){
+switch (req.url){
+  case '/1.html':res.write('11111');break;
+  case '/2.html':res.write('22222');break;
+  default :res.write('404');
+
+}
+res.end()
+});
+server.listen(8085);
+
+//数据库连接
+const MySql=require('mysql')
+//var db=MySql.createPool({})
+var db=MySql.createConnection({
+		host:'localhost',
+		port:3306,
+		user:'root',
+		password:'123456',
+		database:'0914'
+})
+db.query("SELECT * FROM `user_table`",(error,data)=>{
+	if(error){
+		console.log('error')
+	}else{
+		console.log(JSON.stringify(data))
+
+	}
+})
+代码改动不需要重启node服务器
+npm install -g supervisor
+supervisor  server.js
+
+npm install body-parser
+npm install cookie-parser cookie-session
+//cookie 签名加密
+req.secret='5414121';
+res.cookie('user12456','blue',{signed:true,path:'/a',maxAge:30*24*3600})
+server.use(bodyParser.urlencoded({}))
+console.log(req.signedCookies);  //签过名的cookie
+	console.log(req.cookies);	//未签过名的cookie
+		res.clearCookie('user12');  //删除cookie
+app.use('/',function (req,res,next){})  链式操作  第三个参赛 next();
